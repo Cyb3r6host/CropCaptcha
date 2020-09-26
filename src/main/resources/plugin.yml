@@ -1,0 +1,12 @@
+name: CropCaptcha
+version: ${project.version}
+main: me.magas8.cropcaptcha.CropCaptcha
+commands:
+  cropcaptcha:
+    description: Shows help menu of this plugin
+    usage: /cropcaptcha
+  cp:
+    description: Shows help menu of this plugin
+    usage: /cropcaptcha
+
+

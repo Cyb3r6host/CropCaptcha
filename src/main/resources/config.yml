@@ -1,0 +1,55 @@
+#############################################################################
+#         _____                    _____            _       _               #
+#        / ____|                  / ____|          | |     | |              #
+#       | |     _ __ ___  _ __   | |     __ _ _ __ | |_ ___| |__   __ _     #
+#       | |    | '__/ _ \| '_ \  | |    / _` | '_ \| __/ __| '_ \ / _` |    #
+#       | |____| | | (_) | |_) | | |___| (_| | |_) | || (__| | | | (_| |    #
+#       \_____|_|  \___/| .__/   \_____\__,_| .__/ \__\___|_| |_|\__,_|     #
+#                      | |                 | |                              #
+#                     |_|                 |_|                               #
+#############################################################################
+Material-Detection:
+  - SUGAR_CANE_BLOCK
+  - POTATO
+  - CARROT
+  - NETHER_WARTS
+  - CACTUS
+  - CROPS
+  - MELON_BLOCK
+  - PUMPKIN
+##############################################
+#                 Detect                    #
+#                Settings                   #
+#############################################
+#How many crops/detection blocks must a player break before captcha gets enabled
+captcha-chance: 10.0
+captcha-on-break-number-min: 10
+captcha-on-break-number-max: 15
+captcha-pass-check: "&8&l[&2&l!&8&l] &7Captcha completed successfully!"
+captcha-attempts: 2
+captcha-attempt-failure-message: "&8&l[&c&l!&8&l] &7Wrong try again!"
+captcha-commands-on-failure:
+  - "kick %player%"
+
+##############################################
+#                   GUI                     #
+#                 Settings                  #
+#############################################
+captcha-gui-title: "&5&lCrop Captcha"
+captcha-question-item: PAPER
+captcha-question-item-name: "&8&l[&c&l!&8&l] &7Click the %wool%"
+captcha-gui-fill-item: "GREEN_STAINED_GLASS_PANE"
+##############################################
+#                Messages                   #
+#                Settings                   #
+#############################################
+command-usage: "&8&l[&2&l!&8&l] &7Usage: &5/cropcaptcha reload &7or &5/cropcaptcha <player>"
+command-reload: "&8&l[&2&l!&8&l] &7Config reloaded successfully!"
+command-open-captcha: "&8&l[&2&l!&8&l] &7Successfully opened captcha on &5%player%"
+command-noperm: "&8&l[&c&l!&8&l] &7You don't have permission to execute this command!"
+##############################################
+#              Permissions                   #
+##############################################
+#Command /cropcaptcha reload - cropcaptcha.reload
+#Command /cropcaptcha <player> - cropcaptcha.use
+#Bypass Perm- cropcaptcha.bypass
