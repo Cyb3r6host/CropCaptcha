@@ -46,6 +46,7 @@ captcha-gui-fill-item: "GREEN_STAINED_GLASS_PANE"
 command-usage: "&8&l[&2&l!&8&l] &7Usage: &5/cropcaptcha reload &7or &5/cropcaptcha <player>"
 command-reload: "&8&l[&2&l!&8&l] &7Config reloaded successfully!"
 command-open-captcha: "&8&l[&2&l!&8&l] &7Successfully opened captcha on &5%player%"
+command-no-player: "&8&l[&2&l!&8&l] &7&5%player% &7is not online!"
 command-noperm: "&8&l[&c&l!&8&l] &7You don't have permission to execute this command!"
 ##############################################
 #              Permissions                   #

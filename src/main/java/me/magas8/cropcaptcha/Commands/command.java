@@ -14,12 +14,12 @@ public class command implements CommandExecutor {
     public command(CropCaptcha plugin) {
         this.plugin = plugin;
         plugin.getCommand("cropcaptcha").setExecutor(this);
-        plugin.getCommand("cp").setExecutor(this);
+        plugin.getCommand("cc").setExecutor(this);
     }
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(command.getName().equalsIgnoreCase("cropcaptcha") || command.getName().equalsIgnoreCase("cp")) {
+        if(command.getName().equalsIgnoreCase("cropcaptcha") || command.getName().equalsIgnoreCase("cc")) {
             if (args.length < 1) {
                 sender.sendMessage(utils.color(plugin.getConfig().getString("command-usage")));
                 return true;
@@ -37,6 +37,9 @@ public class command implements CommandExecutor {
                     if (player != null) {
                         new CaptchaGUI(plugin).open(player);
                         sender.sendMessage(utils.color(plugin.getConfig().getString("command-open-captcha").replace("%player%", player.getName())));
+                    }else{
+                        sender.sendMessage(utils.color(plugin.getConfig().getString("command-no-player").replace("%player%", args[0])));
+
                     }
                 }else{
                     sender.sendMessage(utils.color(plugin.getConfig().getString("command-noperm")));
