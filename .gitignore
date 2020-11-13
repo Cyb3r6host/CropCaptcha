@@ -27,6 +27,7 @@
 
 #Maven
 /target
+/Dependencies
 
 
 #Build files
